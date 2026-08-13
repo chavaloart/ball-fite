@@ -12,24 +12,27 @@
     <nav><a aria-current="page" href="privacy.html">Privacy</a><a href="terms.html">Terms</a><a href="https://github.com/chavaloart/circle-fight">GitHub</a></nav>
   </header>
   <main class="legal">
-    <p class="eyebrow">EFFECTIVE AUGUST 11, 2026</p>
+    <p class="eyebrow">EFFECTIVE AUGUST 13, 2026</p>
     <h1>Privacy Policy</h1>
-    <p class="summary">BALL FITE Video Uploader is a private desktop application operated by its developer. It uses Google OAuth 2.0 and YouTube API Services to upload original gameplay videos and manage their metadata on an explicitly authorized YouTube channel.</p>
+    <p class="summary">BALL FITE Video Uploader is a private, single-user desktop application operated by its developer. It uses platform authorization and publishing APIs to send original BALL FITE gameplay videos to accounts explicitly authorized by the operator.</p>
 
     <h2>Information accessed</h2>
-    <p>The application accesses only the YouTube account information needed to identify the authorized channel, list that channel's playlists, retrieve assignable video categories, upload videos, and optionally add an uploaded video to a selected playlist. It does not access viewer information, comments, analytics, subscriptions, passwords or unrelated Google account data.</p>
+    <p>For YouTube, the application accesses the channel identity, playlists and video categories needed to configure and upload videos. For Instagram, it accesses the authorized professional account's identifier, username, display name and account type, and uses the content-publishing permission to prepare or publish operator-selected Reels. For TikTok, the planned integration uses basic profile information to display the authorized destination and the video-upload permission to transfer operator-selected videos into TikTok's inbox editing flow. The application does not request messages, comments, contacts, advertising data, passwords or unrelated account data.</p>
 
     <h2>Local storage and retention</h2>
-    <p>OAuth access and refresh tokens are stored locally on the operator's device and are used only for operator-requested actions. A local upload ledger stores file fingerprints, local file paths, upload timestamps, video titles and returned YouTube video IDs to prevent duplicate uploads. This information remains on the operator's device until the corresponding local files are deleted.</p>
+    <p>Platform access and refresh tokens are stored locally on the operator's device and are used only for operator-requested actions. A local upload ledger stores platform names, file fingerprints, local file paths, upload timestamps, video titles and returned platform media IDs to prevent duplicate uploads. This information remains on the operator's device until the corresponding local files are deleted.</p>
+
+    <h2>Temporary media transfer</h2>
+    <p>Instagram requires a publicly reachable HTTPS video URL while it ingests a Reel. When temporary hosting is configured, the application uploads only the operator-selected video to a dedicated temporary object-storage location, supplies its unguessable URL to Instagram, waits for ingestion to finish, and then deletes the temporary object. The storage provider processes the file solely to perform this transfer. The application does not use temporarily hosted media for advertising, analytics or unrelated distribution.</p>
 
     <h2>Sharing and advertising</h2>
-    <p>YouTube API data and Google user data are not sold, rented, shared with third parties, transferred for advertising, or used to create advertising profiles. The application has no advertising and does not provide YouTube data to data brokers.</p>
+    <p>Google, YouTube, Meta, Instagram and TikTok account data are not sold, rented, provided to data brokers, transferred for advertising or used to create advertising profiles. Data is sent only to the platform selected by the operator and, when required for Instagram ingestion, the configured temporary storage provider. The application has no advertising.</p>
 
     <h2>Revoking access and deleting data</h2>
-    <p>The operator may revoke the application's Google access at any time from <a href="https://myaccount.google.com/connections">Google Account third-party connections</a>. Local authorization data can be deleted by removing <code>data/youtube_token.json</code>. Local upload history can be deleted by removing <code>data/video_uploads.sqlite3</code>. Revocation stops future API access but does not delete videos already uploaded to YouTube; those can be managed in YouTube Studio.</p>
+    <p>Google access can be revoked from <a href="https://myaccount.google.com/connections">Google Account third-party connections</a>. Instagram access can be removed under Instagram Settings, Website permissions, Apps and websites. TikTok access can be removed under TikTok Settings and privacy, Security and permissions, Apps and services permissions. Local authorization data can be deleted by removing the applicable token files under <code>data/</code>, and local upload history can be deleted by removing <code>data/video_uploads.sqlite3</code>. Revocation stops future API access but does not delete previously published media; that media must be managed on the relevant platform.</p>
 
-    <h2>YouTube and Google policies</h2>
-    <p>Use of YouTube information is subject to the <a href="https://www.youtube.com/t/terms">YouTube Terms of Service</a>. Google's handling of information is described in the <a href="https://policies.google.com/privacy">Google Privacy Policy</a>.</p>
+    <h2>Platform policies</h2>
+    <p>Platform use is also subject to the <a href="https://www.youtube.com/t/terms">YouTube Terms of Service</a>, <a href="https://privacycenter.instagram.com/policy/">Meta Privacy Policy</a>, and <a href="https://www.tiktok.com/legal/page/eea/privacy-policy/en">TikTok Privacy Policy</a>. Google's handling of information is described in the <a href="https://policies.google.com/privacy">Google Privacy Policy</a>.</p>
 
     <h2>Changes</h2>
     <p>Material changes to this policy will be published on this page with a revised effective date.</p>
